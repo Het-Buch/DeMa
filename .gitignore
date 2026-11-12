@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Environment
+venv/
+.venv/
+
+# Cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.cache/
+
+# Training output
+assets/results.zip
+assets/results.png
+results/
+figures/
+checkpoints/
+wandb/
+d3rlpy_logs/
+*+.log

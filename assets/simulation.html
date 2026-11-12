@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DeMa simulation</title><style>__SIMULATION_STYLE__</style></head>
+<body>
+<header class="run-header"><div id="agent-tabs" class="agent-tabs" role="group" aria-label="Agent to inspect"></div><div class="run-meta"><span id="replay-status"></span></div></header>
+<section id="stage" class="stage" aria-label="Synchronized simulations">
+ <figure class="simulation active" id="primary-scene"><div class="viewport"><img id="robot-frame" alt="Selected robot simulation"><div id="scene-flag" class="scene-flag"></div><div class="displacement" id="scene-distance"></div><div class="direction" id="direction"></div><span id="empty-cover" class="ready hidden">Press Run</span></div><figcaption><div class="agent-name" id="scene-agent"></div><div class="scene-numbers"><span id="scene-motion"></span><strong id="scene-score"></strong></div></figcaption></figure>
+ <figure class="simulation hidden" id="secondary-scene"><div class="viewport"><img id="other-frame" alt="Comparison robot at the same decision"><div id="other-flag" class="scene-flag"></div><div class="displacement" id="other-distance"></div><div class="direction" id="other-direction"></div></div><figcaption><div class="agent-name" id="other-agent"></div><div class="scene-numbers"><span id="other-motion"></span><strong id="other-score"></strong></div></figcaption></figure>
+</section>
+<section class="transport" aria-label="Replay controls"><div class="buttons"><button id="play" class="play" aria-label="Play simulation replay">Play</button><button id="back" aria-label="Previous decision">Back</button><button id="next" aria-label="Next decision">Next</button><button id="restart" aria-label="Reset replay">Reset</button><span class="time" id="time-label"></span></div><div class="playback"><span id="decision-tag"></span></div><div class="timeline"><input id="scrubber" type="range" min="0" max="1000" value="0" step="1" aria-label="Select a decision"><span id="timeline-end"></span></div><div id="events" class="events"></div></section>
+<section id="run-outcome" class="run-outcome hidden" role="status" aria-live="polite"><div><span id="outcome-label"></span><strong id="outcome-model"></strong></div><span id="outcome-reason"></span></section>
+<section class="telemetry" aria-label="Selected decision">
+ <div class="instrument state"><header><h2>State</h2><span id="state-time"></span></header><div id="sensors" class="sensors"></div></div>
+ <div class="instrument action"><header><h2>Leg commands</h2><span id="action-flag"></span></header><div id="motors" class="motors"></div><div class="motor-scale"><span>-1</span><span>0</span><span>+1</span></div></div>
+ <div class="instrument reward"><header><h2>Reward this step</h2><span id="reward-status" class="status-dot"></span></header><canvas id="reward-chart" role="img" aria-label="Forward reward and joint cost, or sparse goal reward"></canvas><div id="reward-equation" class="reward-equation"></div><div class="reward-total"><span>=</span><strong id="step-score"></strong></div></div>
+</section>
+<section class="plots"><div class="route"><header><h2 id="guide-title">Position</h2><span id="guide-value"></span></header><canvas id="guide" role="img" aria-label="Robot position and path"></canvas></div><div class="trace"><header><h2 id="chart-title">Total reward</h2><select id="chart-mode" aria-label="Reward plot"><option value="total_reward">Total</option><option value="reward">Per step</option></select></header><canvas id="trace" role="img" aria-label="Reward against decision number; hover for values or click to seek"></canvas><div id="trace-tooltip" class="trace-tooltip hidden" role="tooltip"></div><div id="legend" class="legend"></div></div></section>
+<footer class="data-footer"><button id="export-csv" class="export hidden">Export CSV</button><details class="results"><summary>Results</summary><div id="comparison-grid" class="comparison-grid"></div><span id="sample-size"></span></details><details class="raw"><summary>Data</summary><pre id="raw-values"></pre></details></footer>
+<script>const DATA=__SIMULATION_DATA__;
+__SIMULATION_SCRIPT__</script>
+</body></html>

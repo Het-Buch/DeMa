@@ -1,0 +1,5 @@
+d3rlpy==2.8.1
+minari==0.5.4
+mujoco==3.14.0
+matplotlib==3.11.2
+wandb==0.31.0
