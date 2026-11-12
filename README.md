@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-Models-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-UI%20Simulation-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://YOUR-APP.streamlit.app)
 
-**[Live demo](https://YOUR-APP.streamlit.app)** (deployment pending)
+**[Live demo]([[https://YOUR-APP.streamlit.app](https://dema-test.streamlit.app/)](https://dema-test.streamlit.app/))** (deployment pending)
 
 This project studies **Decision Mamba (DeMa)** for learning robot control from recorded experience. It compares DeMa with **Decision Transformer (DT)** and other offline reinforcement learning methods on HalfCheetah and AntMaze, with experiments on control performance, computation, and model design.
 
