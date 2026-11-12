@@ -53,6 +53,8 @@ The training data is accessed through **Minari**, using the HalfCheetah medium d
 
 The requested reward guides action prediction. The reward actually earned comes from the simulator.
 
+![Methodology: recorded data, preparation, model training, simulator testing and interactive demo](assets/methodology.png)
+
 ## Experiments and notebooks
 
 The experiments compare rewards, variation between independently trained models, model size, and computational performance. Ablation studies change a design choice to examine its effect, including input layout, normalization, timestep information, and history handling.
